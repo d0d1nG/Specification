@@ -36,7 +36,7 @@ public class Entity {
 	}
 	@Override
 	public String toString() {
-		return "Entity [id=" + id + ", name=" + name + ", properties=" + properties.toString() + ", entities=" + entities.toString() + "]";
+		return  id + name + properties.toString() + entities.toString() ;
 	}
 	
 	
