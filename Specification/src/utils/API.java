@@ -20,6 +20,8 @@ public abstract class API
 //	abstract public void exportObject(String dir, Object obj);
 	
 	abstract public void save(List<Entity> data, String fileName);
+	abstract public void enterEntity(String tekst);
+	//abstract public void dodajSaIDom(String fileName);
 	
 	abstract void openFile(File file);
 	/// da openFile vraca listu 
@@ -38,8 +40,10 @@ public abstract class API
 		File[] contents = directory.listFiles();
 		
 		for(File f : contents) 
-		{
-			openFile(f);
+		{	
+			if (f.length() > 0) {
+				openFile(f);
+			}
 		}
 		return entities;
 	}
