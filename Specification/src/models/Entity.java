@@ -3,9 +3,10 @@ package models;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Entity {
+public class Entity implements Comparable<Entity>{
 	private String id;
 	private String name;
+	public String a;
 	
 	private Map<String, Object> properties = new HashMap<String, Object>();
 	private Map<String, Entity> entities = new HashMap<String, Entity>();
@@ -36,8 +37,19 @@ public class Entity {
 	}
 	@Override
 	public String toString() {
-		return  id + name + properties.toString() + entities.toString() ;
+	//	return  id + name + properties.toString() + entities.toString() ;
+		return  id +" "+ name ;
 	}
+	@Override
+	public int compareTo(Entity o) {
+		if (Integer.parseInt(id) > Integer.parseInt(o.getId())) {
+			return -1;
+		} else if (Integer.parseInt(id) < Integer.parseInt(o.getId())){
+			return 1;
+		}
+		return 0;
+	}
+	
 	
 	
 }

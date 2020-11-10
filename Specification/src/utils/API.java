@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.scene.control.TextField;
 import models.Entity;
 
 public abstract class API 
@@ -21,6 +20,8 @@ public abstract class API
 	
 	abstract public void save(List<Entity> data, String fileName);
 	abstract public void enterEntity(String tekst);
+	abstract public void brisiNaOsnovuIDa(String id, String dirPath);
+	abstract public void brisiKljucVrednost(List<Entity> data, String key, String value, String dirPath);
 	//abstract public void dodajSaIDom(String fileName);
 	
 	abstract void openFile(File file);
