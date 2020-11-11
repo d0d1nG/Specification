@@ -6,7 +6,6 @@ import java.util.Map;
 public class Entity implements Comparable<Entity>{
 	private String id;
 	private String name;
-	public String a;
 	
 	private Map<String, Object> properties = new HashMap<String, Object>();
 	private Map<String, Entity> entities = new HashMap<String, Entity>();
