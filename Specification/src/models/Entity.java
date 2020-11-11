@@ -36,7 +36,7 @@ public class Entity implements Comparable<Entity>{
 	}
 	@Override
 	public String toString() {
-		return  id +" "+ name+" "+ properties.toString()+" "+entities.toString() ;
+		return  "id: "+id +" ime: "+ name+" "+ properties.toString()+" "+entities.toString() ;
 	//	return  id +" "+ name ;
 	}
 	@Override
